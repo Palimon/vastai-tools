@@ -5,9 +5,7 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
-    - [Checking System Information](#checking-system-information)
-    - [Monitoring GPU Usage](#monitoring-gpu-usage)
-    - [Network Diagnostics](#network-diagnostics)
+    - [GPU & Linkage Stress Test](#gpu--linkage-stress-test)
 - [Contributing](#contributing)
 - [License](#license)
 
