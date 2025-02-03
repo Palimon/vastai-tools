@@ -76,28 +76,6 @@ cd vastai-tools
     ./gputest.sh
     ```
 
-Use the `system_info.sh` script to gather detailed information about the system:
-
-```bash
-./scripts/system_info.sh
-```
-
-### Monitoring GPU Usage
-
-The `gpu_monitor.py` script helps in monitoring GPU usage:
-
-```bash
-python3 scripts/gpu_monitor.py
-```
-
-### Network Diagnostics
-
-Run the `network_diagnostics.sh` script to perform network diagnostics:
-
-```bash
-./scripts/network_diagnostics.sh
-```
-
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
