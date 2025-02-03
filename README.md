@@ -15,6 +15,7 @@ This repository contains various scripts and tools for managing Vast.ai servers.
 ## Usage
 
 ### GPU & Linkage Stress Test
+This GPU stability test runs for around 24hrs. During that time it cycles between burn tests and cooldown periods to test the GPUs and links.  When I've had bad links, they seem to fail ~2-8hrs into this test.
 
 1. Install the Screen app:
 
