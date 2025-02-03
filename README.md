@@ -3,7 +3,6 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Installation](#installation)
 - [Usage](#usage)
     - [GPU & Linkage Stress Test](#gpu--linkage-stress-test)
 - [Contributing](#contributing)
@@ -11,16 +10,7 @@
 
 ## Introduction
 
-This repository contains various scripts and tools for troubleshooting AI servers running Ubuntu. These tools help in diagnosing system issues, monitoring hardware usage, and performing network diagnostics.
-
-## Installation
-
-To get started, clone the repository and navigate to the directory:
-
-```bash
-git clone https://github.com/yourusername/vastai-tools.git
-cd vastai-tools
-```
+This repository contains various scripts and tools for managing Vast.ai servers.
 
 ## Usage
 
