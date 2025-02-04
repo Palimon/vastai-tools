@@ -39,8 +39,6 @@ This GPU stability test runs for around 24hrs. During that time it cycles betwee
     ```
     ```bash
     #!/bin/bash
-    screen -S burn
-
     for i in {1..500}; do
         echo "Running GPU stress test iteration $i"
         docker run --rm --gpus all gpu_burn
@@ -59,7 +57,7 @@ This GPU stability test runs for around 24hrs. During that time it cycles betwee
 4. Enter screen and run burn test:
 
     ```bash
-    screen -r burn
+    screen -S burn
     ```
     ```bash
     ./gputest.sh
