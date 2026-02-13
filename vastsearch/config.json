@@ -1,0 +1,17 @@
+{
+    "gpuNames": [
+        "RTX_3090",
+        "RTX_4090",
+        "Q_RTX_6000",
+        "Q_RTX_8000",
+        "RTX_A6000",
+        "RTX_5000Ada",
+        "RTX_6000Ada",
+        "RTX_5070_Ti",
+        "RTX_5080",
+        "RTX_5090",
+        "RTX_PRO_6000_WS"
+    ],
+    "hostRevenueMultiplier": 0.75,
+    "queryLimit": 500
+}

@@ -1,8 +1,19 @@
 #example CMD query
 #vastai search offers gpu_name=RTX_PRO_6000_WS verified=false rentable=false --limit 500
 
-# Define GPU names list
-$gpuNames = @("RTX_3090", "RTX_4090", "Q_RTX_6000", "Q_RTX_8000", "RTX_A6000", "RTX_6000Ada", "RTX_5070_Ti", "RTX_5080", "RTX_5090", "RTX_PRO_6000_WS")
+# Load configuration from config.json, fall back to defaults if missing
+$configPath = Join-Path $PSScriptRoot "config.json"
+if (Test-Path $configPath) {
+    $config = Get-Content $configPath -Raw | ConvertFrom-Json
+} else {
+    $config = [PSCustomObject]@{
+        gpuNames = @("RTX_3090", "RTX_4090", "Q_RTX_6000", "Q_RTX_8000", "RTX_A6000", "RTX_5000Ada", "RTX_6000Ada", "RTX_5070_Ti", "RTX_5080", "RTX_5090", "RTX_PRO_6000_WS")
+        hostRevenueMultiplier = 0.75
+        queryLimit = 500
+    }
+}
+
+$gpuNames = $config.gpuNames
 
 function ProcessGPU {
     param ([string]$gpuName)
@@ -17,18 +28,25 @@ function ProcessGPU {
     $jsonFileRented = Join-Path $subfolder ("rented_by_others.json" -f $gpuName)
     $jsonFileUnrented = Join-Path $subfolder ("unrented.json" -f $gpuName)
 
-    # Vast.ai CLI commands
-    $commandRentedVerified = "vastai search offers 'gpu_name=""$gpuName"" verified=true rentable=false' --limit 500 --order gpuCostPerHour --raw"
-    $commandRentedUnverified = "vastai search offers 'gpu_name=""$gpuName"" verified=false rentable=false' --limit 500 --order gpuCostPerHour --raw"
-    $commandUnrentedVerified = "vastai search offers 'gpu_name=""$gpuName"" verified=true rentable=true' --limit 500 --order gpuCostPerHour --raw"
-    $commandUnrentedUnverified = "vastai search offers 'gpu_name=""$gpuName"" verified=false rentable=true' --limit 500 --order gpuCostPerHour --raw"
+    # Query the Vast.ai CLI and return parsed JSON
+    function Invoke-VastQuery {
+        param (
+            [string]$gpu,
+            [string]$verified,
+            [string]$rentable,
+            [int]$limit
+        )
+        $filter = "gpu_name=$gpu verified=$verified rentable=$rentable"
+        $raw = & vastai search offers $filter --limit $limit --order gpuCostPerHour --raw
+        return $raw | ConvertFrom-Json
+    }
 
     # Run commands and load data
     try {
-        $dataRentedVerified = Invoke-Expression $commandRentedVerified | ConvertFrom-Json
-        $dataRentedUnverified = Invoke-Expression $commandRentedUnverified | ConvertFrom-Json
-        $dataUnrentedVerified = Invoke-Expression $commandUnrentedVerified | ConvertFrom-Json
-        $dataUnrentedUnverified = Invoke-Expression $commandUnrentedUnverified | ConvertFrom-Json
+        $dataRentedVerified    = Invoke-VastQuery -gpu $gpuName -verified "true"  -rentable "false" -limit $config.queryLimit
+        $dataRentedUnverified  = Invoke-VastQuery -gpu $gpuName -verified "false" -rentable "false" -limit $config.queryLimit
+        $dataUnrentedVerified  = Invoke-VastQuery -gpu $gpuName -verified "true"  -rentable "true"  -limit $config.queryLimit
+        $dataUnrentedUnverified = Invoke-VastQuery -gpu $gpuName -verified "false" -rentable "true"  -limit $config.queryLimit
     } catch {
         Write-Host "Nya~! CLI error for $gpuName : $_"
         return
@@ -72,74 +90,41 @@ function ProcessGPU {
         else { return [math]::Round($ramGB, 2) }
     }
 
-    # Second function with 10% grouping logic
-    function Convert-RAMConfig2 {
-        param ([double]$ramMB)
-        $ramGB = $ramMB / 1024
-        $standards = @(32, 64, 96, 128, 192, 256, 384, 512, 768, 1024, 1280, 1536)
-        foreach ($std in $standards) {
-            if ([math]::Abs($ramGB - $std) / $std -le 0.1) {
-                return $std
+    # Convert raw API objects to structured CSV-ready objects
+    function Convert-MachineData {
+        param ([array]$machines)
+        return $machines | ForEach-Object {
+            # The output PricePerHour is the per-GPU actual rental rate I see as a host after Vast.ai marketplace tax.
+            $adjustedPricePerHour = [math]::Round(([double]$_.search.gpuCostPerHour / [double]$_.num_gpus) * $config.hostRevenueMultiplier, 2)
+            [PSCustomObject]@{
+                Verified     = $_.verified
+                MachineID    = [math]::Round([double]$_.machine_id, 2)
+                GPU          = $_.gpu_name
+                NumGPUs      = [math]::Round([double]$_.num_gpus, 2)
+                PricePerHour = $adjustedPricePerHour
+                Rented       = $_.rented
+                CPU          = $_.cpu_name
+                CPUCores     = [math]::Round([int]$_.cpu_cores, 2)
+                CPUCoresEffective = [math]::Round([double]$_.cpu_cores_effective, 2)
+                RAM          = Convert-RAMConfig([double]$_.cpu_ram)
+                Storage      = [math]::Round(([double]$_.disk_space / 1024), 2)
+                PCIE         = [math]::Round([double]$_.pcie_bw, 2)
+                DiskBW       = [math]::Round([double]$_.disk_bw, 2)
+                InetDown     = [math]::Round([double]$_.inet_down, 2)
+                InetUp       = [math]::Round([double]$_.inet_up, 2)
+                InternetDownCostPerTB = [math]::Round([double]$_.inet_down_cost * 1024, 2)
+                InternetUpCostPerTB = [math]::Round([double]$_.inet_up_cost * 1024, 2)
+                StorageCost  = [math]::Round([double]$_.storage_cost, 2)
+                Location     = $_.location
+                MoboName     = $_.mobo_name
+                VRAM_GB      = [math]::Round([double]$_.gpu_ram / 1024, 2)
             }
         }
-        return [math]::Round($ramGB, 2)
     }
 
-    # Prepare data for CSV, convert MB to GB configs
-    $resultsRented = $dataRented | ForEach-Object {
-        # The output PricePerHour is the per-GPU actual rental rate I see as a host after Vast.ai marketplace tax.
-        $adjustedPricePerHour = [math]::Round(([double]$_.search.gpuCostPerHour / [double]$_.num_gpus) * 0.75, 2)
-        [PSCustomObject]@{
-            Verified     = $_.verified
-            MachineID    = [math]::Round([double]$_.machine_id, 2)
-            GPU          = $_.gpu_name
-            NumGPUs      = [math]::Round([double]$_.num_gpus, 2)
-            PricePerHour = $adjustedPricePerHour
-            Rented       = $_.rented
-            CPU          = $_.cpu_name
-            CPUCores     = [math]::Round([int]$_.cpu_cores, 2)
-            CPUCoresEffective = [math]::Round([double]$_.cpu_cores_effective, 2)
-            RAM          = Convert-RAMConfig([double]$_.cpu_ram)
-            Storage      = [math]::Round(([double]$_.disk_space / 1024), 2)
-            PCIE         = [math]::Round([double]$_.pcie_bw, 2)
-            DiskBW       = [math]::Round([double]$_.disk_bw, 2)
-            InetDown     = [math]::Round([double]$_.inet_down, 2)
-            InetUp       = [math]::Round([double]$_.inet_up, 2)
-            InternetDownCostPerTB = [math]::Round([double]$_.inet_down_cost * 1024, 2)
-            InternetUpCostPerTB = [math]::Round([double]$_.inet_up_cost * 1024, 2)
-            StorageCost  = [math]::Round([double]$_.storage_cost, 2)
-            Location     = $_.location
-            MoboName     = $_.mobo_name
-            VRAM_GB      = [math]::Round([double]$_.gpu_ram / 1024, 2)
-        }
-    }
-    $resultsUnrented = $dataUnrented | ForEach-Object {
-        # The output PricePerHour is the per-GPU actual rental rate I see as a host after Vast.ai marketplace tax.
-        $adjustedPricePerHour = [math]::Round(([double]$_.search.gpuCostPerHour / [double]$_.num_gpus) * 0.75, 2)
-        [PSCustomObject]@{
-            Verified     = $_.verified
-            MachineID    = [math]::Round([double]$_.machine_id, 2)
-            GPU          = $_.gpu_name
-            NumGPUs      = [math]::Round([double]$_.num_gpus, 2)
-            PricePerHour = $adjustedPricePerHour
-            Rented       = $_.rented
-            CPU          = $_.cpu_name
-            CPUCores     = [math]::Round([int]$_.cpu_cores, 2)
-            CPUCoresEffective = [math]::Round([double]$_.cpu_cores_effective, 2)
-            RAM          = Convert-RAMConfig([double]$_.cpu_ram)
-            Storage      = [math]::Round(([double]$_.disk_space / 1024), 2)
-            PCIE         = [math]::Round([double]$_.pcie_bw, 2)
-            DiskBW       = [math]::Round([double]$_.disk_bw, 2)
-            InetDown     = [math]::Round([double]$_.inet_down, 2)
-            InetUp       = [math]::Round([double]$_.inet_up, 2)
-            InternetDownCostPerTB = [math]::Round([double]$_.inet_down_cost * 1024, 2)
-            InternetUpCostPerTB = [math]::Round([double]$_.inet_up_cost * 1024, 2)
-            StorageCost  = [math]::Round([double]$_.storage_cost, 2)
-            Location     = $_.location
-            MoboName     = $_.mobo_name
-            VRAM_GB      = [math]::Round([double]$_.gpu_ram / 1024, 2)
-        }
-    }
+    # Prepare data for CSV
+    $resultsRented = Convert-MachineData $dataRented
+    $resultsUnrented = Convert-MachineData $dataUnrented
 
     # Get unique NumGPUs
     $allResults = $resultsRented + $resultsUnrented
