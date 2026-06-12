@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"17730","RTX 5000Ada","4","0.4","False","AMD EPYC 7J13 64-Core Processor","128","128","512","6.03","25","3978.7","367.1","264.3","2.67","4","0.2",,"ROMED8-2T","31.99"

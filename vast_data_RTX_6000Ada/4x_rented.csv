@@ -1,0 +1,8 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"38100","RTX 6000Ada","4","0.56","False","AMD EPYC 7352 24-Core Processor","48","32","384","0.48","23.3","3191","791.3","659","0","0","0.2",,"ROMED16QM3","47.99"
+,"57960","RTX 6000Ada","4","0.55","False","AMD EPYC 7542 32-Core Processor","128","128","512","3.9","19.4","2351","141.5","41.8","5.33","4","0.2",,"H12DSG-O-","47.99"
+,"24739","RTX 6000Ada","4","0.5","False","AMD EPYC 9474F 48-Core Processor","96","48","512","1.37","25.7","4059.43","657.2","694.7","4","4","0.13",,"MZB3-G41-000","47.99"
+,"26804","RTX 6000Ada","4","0.75","False","AMD EPYC 9334 32-Core Processor","128","64","512","1.66","25.6","10752","895.4","925.7","2.67","4","0.33",,"GENOA2D24G-2L","47.99"
+,"43541","RTX 6000Ada","4","0.63","False","XEON® PLATINUM 8558","192","96","1024","0.73","25.7","7230","809.1","853.7","0","0","0.2",,"MSB3-G40-000","47.99"
+,"100231","RTX 6000Ada","4","0.64","False","AMD EPYC 7443 24-Core Processor","96","48","256","1.89","23.9","3007.21","8717.5","6858","2.67","2.67","0.19",,"H12DSG-O-","47.99"
+,"23779","RTX 6000Ada","4","0.64","False","AMD EPYC 7443 24-Core Processor","96","48","256","2.38","22.4","2607.11","9585","7502.5","2.67","2.67","0.2",,"H12DSG-O-","44.99"

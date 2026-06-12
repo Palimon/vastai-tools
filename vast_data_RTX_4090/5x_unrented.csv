@@ -1,0 +1,3 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"77029","RTX 4090","5","0.5","False","Xeon® Gold 6133 ","80","80","256","2.49","11.7","2533","4972.1","1363.3","2.67","4","0.2",,"X11DPG-OT-","23.99"
+,"76987","RTX 4090","5","0.5","False","Xeon® Gold 6133 ","80","80","256","2.5","11.7","1628","4633.3","1634.8","2.67","4","0.2",,"X11DPG-OT-","23.99"

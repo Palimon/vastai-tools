@@ -1,0 +1,3 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"68381","RTX 5080","8","0.28","False","AMD EPYC 7502 32-Core Processor","128","128","256","2.95","17.4","2253","713.2","644.1","2.67","4","0.33",,"Palos","15.92"
+,"55741","RTX 5080","8","0.2","False","AMD EPYC 7502 32-Core Processor","128","128","256","2.73","15.8","1908.2","731.1","564.1","1.33","1.33","0.27",,"ROME2D32GM-2T","15.92"

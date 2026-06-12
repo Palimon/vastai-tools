@@ -1,0 +1,8 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"56513","RTX 5060 Ti","8","0.16","False","AMD EPYC 7502 32-Core Processor","64","64","128","1.47","13.4","4712","842.8","849.9","0","0","0.12",,"ROMED8-2T","15.93"
+,"52572","RTX 5060 Ti","8","0.19","False","AMD EPYC 7502 32-Core Processor","64","64","256","1.29","13.4","8000","933.4","92.4","0","0","0.13",,"ROMED8-2T","15.93"
+,"53171","RTX 5060 Ti","8","0.18","False","AMD EPYC 7502 32-Core Processor","64","64","256","0.55","13.5","4543","928.3","91.4","0","0","0.13",,"ROMED8-2T","15.93"
+,"49732","RTX 5060 Ti","8","0.14","False","AMD EPYC 7H12 64-Core Processor","128","85.33","256","6.4","13.6","6673.45","4458.1","1676.2","2.67","1.33","0.48",,"ROMED16QM3","15.93"
+,"56810","RTX 5060 Ti","8","0.16","False","AMD EPYC 7B13 64-Core Processor","128","128","256","0.45","13.5","3094.6","928","791.1","40","40","0.2",,"H12D-8D","15.93"
+,"106654","RTX 5060 Ti","8","0.15","False","AMD EPYC 7742 64-Core Processor","128","128","256","3.17","13.6","1630","2024","733.2","2.67","4","0.2",,"ROMED8-2T","15.93"
+,"89794","RTX 5060 Ti","8","0.17","False","AMD EPYC 7B13 64-Core Processor","128","128","256","3.27","13.6","1320","756.9","157.6","4","4","0.13",,"H12SSL-i","15.93"

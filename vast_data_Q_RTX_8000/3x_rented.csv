@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"34798","Q RTX 8000","3","0.19","False","Xeon® Gold 6244 ","32","32","192","0.21","7","284","747.1","825.7","0.01","0.01","0.13",,"X11DGQ","48"

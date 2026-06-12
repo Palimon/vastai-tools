@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"15167","Q RTX 8000","8","0.19","False","Xeon® E5-2698 v4 ","80","80","384","0.3","9.6","1439","831.5","893.1","0.01","0.01","0.13",,"X10DRG-OT","45"

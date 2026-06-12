@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"59132","RTX 5080","6","0.3","False","AMD EPYC 7452 32-Core Processor","64","64","192","2.92","26.6","2705","2286.1","1060.9","2.67","4","0.2",,"ROMED8-2T","15.92"

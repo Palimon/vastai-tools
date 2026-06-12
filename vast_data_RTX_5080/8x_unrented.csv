@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"137637","RTX 5080","8","0.32","False","AMD EPYC 7532 32-Core Processor","128","128","256","2.88","26.5","2072","0","0","2.67","2.67","0.4",,"T1ADG","15.92"

@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"70346","RTX 5060 Ti","5","0.07","False","AMD EPYC 7R12 48-Core Processor","96","96","192","0.67","13.5","1644.5","106.2","76.2","16","17.33","0.87",,"S8030GM2NE","15.93"

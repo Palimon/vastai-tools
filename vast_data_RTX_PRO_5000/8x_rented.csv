@@ -1,0 +1,4 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"98453","RTX PRO 5000","8","0.7","False","AMD EPYC 9654 96-Core Processor","384","384","512","1.56","54.2","11264","5145.4","2897","0","0","0.13",,"GENOA2D24G-2L","47.79"
+,"45775","RTX PRO 5000","8","0.7","False","AMD EPYC 7452 32-Core Processor","128","128","512","4.19","22.4","4239","6625.3","1990.9","12","12","0.2",,"ROME2D32GM-2T","47.79"
+,"55051","RTX PRO 5000","8","0.7","False","AMD EPYC 9354 32-Core Processor","128","128","512","3.94","55","3669","6502.4","2675.2","12","12","0.2",,"TURIN2D24G-2L","47.79"

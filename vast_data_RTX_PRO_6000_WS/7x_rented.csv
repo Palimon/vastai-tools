@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"51732","RTX PRO 6000 WS","7","0.8","False","AMD EPYC 9534 64-Core Processor","256","256","1536","1.99","54.1","6491","7086","1875.6","13.33","13.33","0.67",,"GENOA2D24G-2L","95.59"

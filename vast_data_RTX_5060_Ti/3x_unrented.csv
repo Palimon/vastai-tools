@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"39053","RTX 5060 Ti","3","0.23","False","AMD EPYC 7502 32-Core Processor","64","27.43","128","0.46","13.6","5493","906.7","903.7","0.01","0","0.2",,"ROMED8-2T","15.93"

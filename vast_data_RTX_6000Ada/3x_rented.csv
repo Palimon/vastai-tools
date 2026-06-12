@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"116700","RTX 6000Ada","3","0.65","False","AMD Ryzen Threadripper PRO 5955WX 16-Cores","32","32","512","11.65","25","8240","5601.4","1385.6","40","40","0.2",,"Pro WS WRX80E-SAGE SE WIFI","47.99"

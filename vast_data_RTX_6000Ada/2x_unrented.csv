@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"57960","RTX 6000Ada","2","0.55","False","AMD EPYC 7542 32-Core Processor","128","64","256","1.95","19.4","2351","141.5","41.8","5.33","4","0.2",,"H12DSG-O-","47.99"

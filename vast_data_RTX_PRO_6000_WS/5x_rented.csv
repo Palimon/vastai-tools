@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"39392","RTX PRO 6000 WS","5","0.6","False","AMD EPYC 9224 24-Core Processor","96","96","1280","1.21","54.9","3423.68","906","796.9","0.68","0.68","0.28",,"K14PG-D24 Series","95.59"

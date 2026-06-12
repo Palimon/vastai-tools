@@ -1,0 +1,4 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"122979","RTX A6000","2","0.34","False","AMD Ryzen Threadripper 3970X 32-Core Processor","64","64","128","1.51","22.4","4746","84.7","91.6","2.67","4","0.2",,"TRX40 AORUS XTREME","47.99"
+,"123026","RTX A6000","2","0.34","False","AMD Ryzen Threadripper 3970X 32-Core Processor","64","64","128","0.71","22","3200.96","86.8","91","2.67","4","0.2",,"TRX40 AORUS XTREME","47.99"
+,"136259","RTX A6000","2","0.26","False","Core™ i9-10940X ","28","28","256","0.76","11.7","3010","88.5","82.9","2.67","4","0.13",,"WS X299 SAGE","47.99"

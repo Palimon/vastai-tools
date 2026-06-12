@@ -1,0 +1,5 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"11182","RTX 5000Ada","1","0.9","False","AMD EPYC 7B12 64-Core Processor","128","128","512","5.45","24.9","3282.7","7307.2","4557.3","2.67","4","0.13",,"MZ32-AR0-00","31.99"
+,"58840","RTX 5000Ada","1","0.3","False","Xeon® Gold 5418Y","96","96","256","2.95","24","501.3","710.3","736.1","1.33","1.33","0.27",,"MS93-FS0-000","31.99"
+,"17730","RTX 5000Ada","1","0.4","False","AMD EPYC 7J13 64-Core Processor","128","32","128","1.51","25","3978.7","367.1","264.3","2.67","4","0.2",,"ROMED8-2T","31.99"
+,"15360","RTX 5000Ada","1","0.5","False","AMD Ryzen Threadripper PRO 7945WX 12-Cores","24","12","128","3.04","25.5","10240","940.4","936.5","4.67","4.67","0.33",,"8B24","31.99"

@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"34582","RTX 4090","7","0.47","False","AMD EPYC 7542 32-Core Processor","128","128","768","3","21.7","2501.86","142.5","34.2","5.33","4","0.2",,"H12DSG-O-","47.99"

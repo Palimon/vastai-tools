@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"49732","RTX 5060 Ti","12","0.14","False","AMD EPYC 7H12 64-Core Processor","128","128","384","9.59","13.6","6673.45","4458.1","1676.2","2.67","1.33","0.48",,"ROMED16QM3","15.93"

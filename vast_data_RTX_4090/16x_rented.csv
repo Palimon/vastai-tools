@@ -1,0 +1,6 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"58267","RTX 4090","16","0.44","False","AMD EPYC 9654 96-Core Processor","224","224","768","5.37","12.2","3351.8","4593.6","5019.8","1.33","1.33","0.2",,"GENOA2D24G-2L","23.99"
+,"53835","RTX 4090","16","0.44","False","AMD EPYC 9654 96-Core Processor","224","224","768","11.17","12.2","2546.65","952.6","946.1","1.33","1.33","0.13",,"GENOA2D24G-2L","23.99"
+,"12914","RTX 4090","16","0.6","False","AMD EPYC 7B12 64-Core Processor","256","256","1024","2.76","12.8","3725.5","835.1","864.1","0","0","0.2",,"ROME2D32GM-2T","23.99"
+,"94352","RTX 4090","16","0.5","False","AMD EPYC 7713 64-Core Processor","256","256","1024","3.1","12.8","4589.29","3723.6","5550.6","5.33","10.67","0.27",,"H12DSG-O-","23.99"
+,"58115","RTX 4090","16","0.5","False","AMD EPYC 7K62 48-Core Processor","192","192","1024","12.52","12.8","4452","3568.2","6178.8","2.67","5.33","0.27",,"ROME2D32GM-2T","23.99"

@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"59049","RTX 5080","5","0.4","False","AMD EPYC 7642 48-Core Processor","192","192","256","2.52","23.2","380","7216.4","3451.2","2.67","4","0.2",,"H12DSG-O-","15.92"

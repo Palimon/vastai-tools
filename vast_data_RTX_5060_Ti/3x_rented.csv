@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"57167","RTX 5060 Ti","3","0.08","False","Core™ i5-6400 ","4","4","32","0.07","1.6","216.1","93.5","86.5","2.67","4","0.13",,"H110 Pro BTC","15.93"

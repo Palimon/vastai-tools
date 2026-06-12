@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"50938","RTX PRO 6000 WS","6","1.2","False","AMD EPYC 9274F 24-Core Processor","96","96","384","10.55","54.2","6597","5810.3","1353.7","12","12","0.2",,"GENOA2D24G-2L","95.59"

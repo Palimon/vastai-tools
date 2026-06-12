@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"52250","Q RTX 8000","4","1","False","Core™ i9-10980XE ","36","36","256","0.01","12.1","2685","932.4","935.3","0","0","0.2",,"WS X299 SAGE","48"

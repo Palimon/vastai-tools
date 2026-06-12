@@ -1,0 +1,7 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"101303","RTX 5080","2","0.75","False","AMD EPYC 7B12 64-Core Processor","128","128","128","0.73","26.5","1108.1","1941.5","756.5","26.67","40","0.2",,"H12D-8D","15.92"
+,"34763","RTX 5080","2","0.4","False","AMD EPYC 7532 32-Core Processor","64","64","128","1.42","20","3518","549.5","813","2.67","4","0.4",,"S8030GM2NE","15.92"
+,"53825","RTX 5080","2","0.25","False","AMD EPYC 7502 32-Core Processor","64","32","64","1.09","5.9","845","952.3","889.4","2.67","4","0.4",,"S8030GM2NE","15.92"
+,"59132","RTX 5080","2","0.3","False","AMD EPYC 7452 32-Core Processor","64","21.33","64","0.97","26.5","2705","2286.1","1060.9","2.67","4","0.2",,"ROMED8-2T","15.92"
+,"125782","RTX 5080","2","0.3","False","AMD Ryzen 7 9800X3D 8-Core Processor","16","16","32","0.67","27.5","2958.85","897.9","889","0","0","0.03",,"X670E Taichi Carrara","15.92"
+,"51593","RTX 5080","2","0.28","False","AMD EPYC 7R32 48-Core Processor","96","48","64","0.49","27","1390","748.9","690.2","1.33","1.33","0.4",,"H12SSL-i","15.92"

@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"15336","RTX PRO 6000 WS","8","1.1","False","AMD EPYC 9175F 16-Core Processor","64","64","1024","3.91","55.2","7926","811.5","928.9","8","9.33","0.43",,"GENOA2D24G-2L","95.59"

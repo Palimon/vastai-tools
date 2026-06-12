@@ -1,0 +1,7 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"123157","RTX PRO 5000","4","1.9","False","AMD EPYC 7K62 48-Core Processor","96","96","256","6.09","26.6","3526","2069.9","2333.6","33.33","13.33","0.47",,"MZ22-G20-00","47.79"
+,"136195","RTX PRO 5000","4","0.66","False","AMD EPYC 9354P 32-Core Processor","64","64","384","5.01","54.2","5406","1415","765.2","6.67","6.67","0.2",,"GENOAD8X-2T","47.79"
+,"101259","RTX PRO 5000","4","1.01","False","AMD EPYC 9555 64-Core Processor","128","128","1024","2.65","54.6","6121","12652","11637.5","3.55","5.32","0.27",,"H13SSH","47.79"
+,"98453","RTX PRO 5000","4","0.7","False","AMD EPYC 9654 96-Core Processor","384","192","256","0.78","54.2","11264","5145.4","2897","0","0","0.13",,"GENOA2D24G-2L","47.79"
+,"43571","RTX PRO 5000","4","0.7","False","AMD EPYC 7452 32-Core Processor","128","64","256","1.87","26.5","3319","5009.4","2703.5","12","12","0.2",,"ROME2D32GM-2T","47.79"
+,"45775","RTX PRO 5000","4","0.7","False","AMD EPYC 7452 32-Core Processor","128","64","256","2.09","26.6","4239","6625.3","1990.9","12","12","0.2",,"ROME2D32GM-2T","47.79"

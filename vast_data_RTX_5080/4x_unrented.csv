@@ -1,0 +1,2 @@
+"Verified","MachineID","GPU","NumGPUs","PricePerHour","Rented","CPU","CPUCores","CPUCoresEffective","RAM","Storage","PCIE","DiskBW","InetDown","InetUp","InternetDownCostPerTB","InternetUpCostPerTB","StorageCost","Location","MoboName","VRAM_GB"
+,"51593","RTX 5080","4","0.28","False","AMD EPYC 7R32 48-Core Processor","96","96","128","0.98","27","1390","748.9","690.2","1.33","1.33","0.4",,"H12SSL-i","15.92"
